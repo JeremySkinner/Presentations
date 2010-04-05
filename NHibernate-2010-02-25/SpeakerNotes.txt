@@ -1,0 +1,31 @@
+- Ensure VS, SQL Management Studio, NHProf, ZoomIt, Powerpoint running. 
+- Set VS font size.
+- Introduce self
+- What is NH?
+	- Open source object relational mapping tool
+	- Free
+	- Around for several years
+	- Very stable.
+	- Port of java hibernate
+	- diverged
+	- Powerful (but has a learning curve)
+	- POCO w/ xml mappings <-- suitable for DDD/Model First + Schema Export
+	- support
+
+
+- DEMO
+	Show database structure
+	NHibernate uses XML Mappings
+		- Configuration
+		- Mapping file (embedded resource)
+		- Explain mapping file
+
+	- Explain ISession & tx (Session usage in web app)
+	- Write query to print all products (demo in NHProf)
+	- Return a particular customer Name = "Jeremy", loop over orders & print product name
+		- Use HQL
+		- Use Criteria
+		- Use Linq
+	- Show NHProf - select n + 1
+	- Eager loading
+

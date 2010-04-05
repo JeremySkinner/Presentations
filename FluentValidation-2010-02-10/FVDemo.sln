@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentValidation", "FluentValidation", "{7A8ABB8F-D9E8-42AF-8E1F-8F67A2E2DCE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVDemo", "FVDemo\FVDemo.csproj", "{7F98137F-F700-46E6-AA30-4C2DA01DD481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVDemo.Tests", "FVDemo.Tests\FVDemo.Tests.csproj", "{F5E50909-A6BA-47A5-A322-5E201BD18C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation", "..\FluentValidation\src\FluentValidation\FluentValidation.csproj", "{DAE0249B-4F69-4AC9-9A17-AA23E0795316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation.Mvc", "..\FluentValidation\src\FluentValidation.Mvc\FluentValidation.Mvc.csproj", "{F781D265-EB91-4876-BF8E-E7E482E7F0BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F98137F-F700-46E6-AA30-4C2DA01DD481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F98137F-F700-46E6-AA30-4C2DA01DD481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F98137F-F700-46E6-AA30-4C2DA01DD481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F98137F-F700-46E6-AA30-4C2DA01DD481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E50909-A6BA-47A5-A322-5E201BD18C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E50909-A6BA-47A5-A322-5E201BD18C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E50909-A6BA-47A5-A322-5E201BD18C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E50909-A6BA-47A5-A322-5E201BD18C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE0249B-4F69-4AC9-9A17-AA23E0795316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE0249B-4F69-4AC9-9A17-AA23E0795316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE0249B-4F69-4AC9-9A17-AA23E0795316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE0249B-4F69-4AC9-9A17-AA23E0795316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F781D265-EB91-4876-BF8E-E7E482E7F0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F781D265-EB91-4876-BF8E-E7E482E7F0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F781D265-EB91-4876-BF8E-E7E482E7F0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F781D265-EB91-4876-BF8E-E7E482E7F0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAE0249B-4F69-4AC9-9A17-AA23E0795316} = {7A8ABB8F-D9E8-42AF-8E1F-8F67A2E2DCE6}
+		{F781D265-EB91-4876-BF8E-E7E482E7F0BE} = {7A8ABB8F-D9E8-42AF-8E1F-8F67A2E2DCE6}
+	EndGlobalSection
+EndGlobal

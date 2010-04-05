@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHDemo" namespace="NHDemo.Model">
+	<class name="Customer" table="Customers">
+		
+		<id name="Id">
+			<generator class="guid.comb" />
+		</id>
+		
+		<property name="Name" />
+		<property name="Company" />
+		<property name="IsPreferredCustomer" />
+		<property name="Discount" />
+
+		<set name="Orders" inverse="true" access="nosetter.camelcase">
+			<key column="CustomerId" />
+			<one-to-many class="Order" />
+		</set>
+		
+	</class>
+</hibernate-mapping>

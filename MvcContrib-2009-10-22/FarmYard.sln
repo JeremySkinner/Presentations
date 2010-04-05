@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmYard", "src\FarmYard\FarmYard.csproj", "{AEF68A59-AF03-425C-8898-B01490CF8A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "src\Tests\Tests.csproj", "{19ABFB31-27D4-4F49-B269-795C6E342705}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF68A59-AF03-425C-8898-B01490CF8A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF68A59-AF03-425C-8898-B01490CF8A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF68A59-AF03-425C-8898-B01490CF8A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF68A59-AF03-425C-8898-B01490CF8A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19ABFB31-27D4-4F49-B269-795C6E342705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19ABFB31-27D4-4F49-B269-795C6E342705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19ABFB31-27D4-4F49-B269-795C6E342705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19ABFB31-27D4-4F49-B269-795C6E342705}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

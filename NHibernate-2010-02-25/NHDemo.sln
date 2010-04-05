@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHDemo", "src\NHDemo\NHDemo.csproj", "{033C2F76-4156-48EB-BE2F-55A02C112F5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{033C2F76-4156-48EB-BE2F-55A02C112F5D}.Debug|x86.ActiveCfg = Debug|x86
+		{033C2F76-4156-48EB-BE2F-55A02C112F5D}.Debug|x86.Build.0 = Debug|x86
+		{033C2F76-4156-48EB-BE2F-55A02C112F5D}.Release|x86.ActiveCfg = Release|x86
+		{033C2F76-4156-48EB-BE2F-55A02C112F5D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
