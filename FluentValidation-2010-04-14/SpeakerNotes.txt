@@ -7,7 +7,7 @@ DEMO 1 - Basic Usage
 - Add NotNull rule for property
 - Show output when run. 
 - Add custom error message (+with template)
-- Conditional validation rule (RuleFor(x => x.Surname).NotNull().When(x => x.Id != 0));
+- Conditional validation rule (RuleFor(x => x.Discount).GreaterThan(0).When(x => x.IsPreferredCustomer))
 - Child Validator (OrderValidator) - add some orders first
 
 
