@@ -12,6 +12,7 @@ DEMO 1 - Basic Usage
 
 
 DEMO 2 - Custom Validation 
+- Use Must
 - Use a custom PropertyValidator:
 
 Demo 3: MVC 2 integration

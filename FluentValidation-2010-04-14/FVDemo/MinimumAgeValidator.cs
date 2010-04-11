@@ -25,4 +25,17 @@ namespace FVDemo {
 			return years >= minimumAge;
 		}
 	}
+
+	/*
+	 dateOfBirth => {
+					var now = DateTime.Today;
+					int years = now.Year - dateOfBirth.Year;
+
+					if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) {
+						--years;
+					}
+
+					return years >= 18;
+				}
+	 */
 }
