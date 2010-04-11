@@ -7,6 +7,8 @@ namespace FVDemo {
 		public string Surname { get; set; }
 		public string Forename { get; set; }
 		public DateTime DateOfBirth { get; set; }
+		public decimal Discount { get; set; }
+		public bool IsPreferredCustomer { get; set; }
 
 		private List<Order> orders = new List<Order>();
 
