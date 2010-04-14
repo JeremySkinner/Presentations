@@ -34,22 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core">
-      <HintPath>..\lib\Castle-Windsor-2.1.1\bin\net-3.5\Castle.Core.dll</HintPath>
+      <HintPath>..\lib\Castle-Windsor-2.1.1\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.DynamicProxy2">
-      <HintPath>..\lib\Castle-Windsor-2.1.1\bin\net-3.5\Castle.DynamicProxy2.dll</HintPath>
+      <HintPath>..\lib\Castle-Windsor-2.1.1\Castle.DynamicProxy2.dll</HintPath>
     </Reference>
     <Reference Include="Castle.MicroKernel">
-      <HintPath>..\lib\Castle-Windsor-2.1.1\bin\net-3.5\Castle.MicroKernel.dll</HintPath>
+      <HintPath>..\lib\Castle-Windsor-2.1.1\Castle.MicroKernel.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor">
-      <HintPath>..\lib\Castle-Windsor-2.1.1\bin\net-3.5\Castle.Windsor.dll</HintPath>
+      <HintPath>..\lib\Castle-Windsor-2.1.1\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="FluentValidation">
       <HintPath>..\lib\FluentValidation\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="FluentValidation.Mvc">
       <HintPath>..\lib\MVC\MVC2\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\Castle-Windsor-2.1.1\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
