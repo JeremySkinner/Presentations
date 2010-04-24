@@ -5,14 +5,13 @@ namespace GridDemo.Lib {
 	using System.Web.Mvc;
 	using MvcContrib.UI.Grid;
 
-	public abstract class ExcelResult<T> : ActionResult where T : class {
+	public class ExcelResult<T> : ActionResult where T : class {
 		private readonly IEnumerable<T> data;
+		private readonly GridModel<T> gridModel = new GridModel<T>();
 
-		protected ExcelResult(IEnumerable<T> data) {
+		public ExcelResult(IEnumerable<T> data) {
 			this.data = data;
 		}
-
-		private readonly GridModel<T> gridModel = new GridModel<T>();
 
 		public ExcelResult<T> Columns(Action<ColumnBuilder<T>> action) {
 			action(gridModel.Column);

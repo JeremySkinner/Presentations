@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace GridDemo.Controllers {
+	using GridDemo.Lib;
 	using GridDemo.Models;
 
 	[HandleError]
@@ -13,10 +14,7 @@ namespace GridDemo.Controllers {
 		CustomerRepository customerRepository = new CustomerRepository();
 
 		public ActionResult Index() {
-			IEnumerable<Customer> customers 
-				= customerRepository.FindAll();
-			
-
+			var customers = customerRepository.FindAll();
 			return View(customers);
 		}
 
@@ -24,5 +22,20 @@ namespace GridDemo.Controllers {
 			var customer = customerRepository.FindById(id);
 			return View(customer);
 		}
+
+		#region Renderer Demo
+
+		public ActionResult Export() {
+			var customers = customerRepository.FindAll();
+
+			return new ExcelResult<Customer>(customers)
+				.Columns(column => {
+					column.For(x => x.Id);
+					column.For(x => x.Name);
+					column.For(x => x.DateOfBirth).Format("{0:d}");
+				});
+		}
+
+		#endregion
 	}
 }
