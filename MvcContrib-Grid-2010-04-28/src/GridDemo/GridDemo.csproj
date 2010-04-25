@@ -80,6 +80,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\down.png" />
+    <Content Include="Content\up.png" />
     <Content Include="Global.asax" />
     <Content Include="Views\Customers\Show.aspx" />
     <Content Include="Web.config" />
