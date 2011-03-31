@@ -34,8 +34,8 @@ namespace FVDemo {
             RegisterRoutes(RouteTable.Routes);
 
             //TODO: Add validator registration here.
-
             #region registration code
+            //            DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
             //            var factory = new AttributedValidatorFactory();
             //            ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(factory));
             #endregion

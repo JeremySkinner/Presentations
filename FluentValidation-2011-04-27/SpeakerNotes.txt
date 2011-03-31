@@ -1,22 +1,68 @@
 - Introduce me
 - What is FluentValidation?
-	- Started about a year and a half ago. A library that allows you to define validation rules in a declarative way, but more flexible than using attributes.
+	- Started in 2008. A library that allows you to define validation rules in a declarative way, but more flexible than using attributes.
 	- Defined using a fluent interface in separate validator classes. 
 
 DEMO 1 - Basic Usage
+- Create class that inherits from AbstractValidator<Person>
 - Add NotNull rule for property
 - Show output when run. 
 - Add custom error message (+with template)
-- Conditional validation rule (RuleFor(x => x.Discount).GreaterThan(0).When(x => x.IsPreferredCustomer))
-- Child Validator (OrderValidator) - add some orders first
+- Cross Property validation RuleFor(x => x.Surname).NotEqual(x => x.Forename);
+- Conditional (Discount > 0 when IsPreferred)
+- Child Validator (AddressValidator)
 
 
 DEMO 2 - Custom Validation 
-- Use Must
+- Age validator using Must: RuleFor(x => x.DateOfBirth).Must(BeOver18).WithMessage("Must be over 18");
+
+bool BeOver18(DateTime dateOfBirth) {
+			var now = DateTime.Today; 
+			int years = now.Year - dateOfBirth.Year;
+
+			if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) {
+				--years;
+			}
+
+			return years >= 18;
+		}
+		
+		
 - Use a custom PropertyValidator:
 
-Demo 3: MVC 2 integration
-- Show app
-- Show contents of global.asax
+public class MinimumAgeValidator : PropertyValidator {
+		readonly int minimumAge;
+
+		public MinimumAgeValidator(int minimumAge) 
+			: base("Must be at least {MinimumAge} years old") {
+			this.minimumAge = minimumAge;
+		}
+
+		protected override bool IsValid(PropertyValidatorContext context) {
+			var dateOfBirth = (DateTime)context.PropertyValue;
+
+			var now = DateTime.Today;
+			int years = now.Year - dateOfBirth.Year;
+
+			if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) {
+				--years;
+			}
+
+			context.MessageFormatter.AppendArgument("MinimumAge", minimumAge);
+
+			return years >= minimumAge;
+		}
+	}
+
+Demo 3: Test Extensions
+- Need to use the FluentValidation.TestHelper namespace
+- ShouldHaveValidationErrorFor
+- ShouldNotHaveValidationErrorFor
+- Demonstrate a failure (remove rule)
+- Can pass in a custom instance.
+
+Demo 4: MVC 2 integration
+- Disable DataAnnotations
 - ModelValidatorProvider integates with DefaultModelBinder
 - ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(new AttributedValidatorFactory()));
+- Add some more rules, demonstrate failure
