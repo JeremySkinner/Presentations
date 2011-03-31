@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVDemo", "FVDemo\FVDemo.csproj", "{391B6149-8D02-4C1F-9A79-A6C98B155380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVDemo.Tests", "FVDemo.Tests\FVDemo.Tests.csproj", "{22677D86-96C3-4FA4-8172-F9CDC435BBEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{391B6149-8D02-4C1F-9A79-A6C98B155380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391B6149-8D02-4C1F-9A79-A6C98B155380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391B6149-8D02-4C1F-9A79-A6C98B155380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391B6149-8D02-4C1F-9A79-A6C98B155380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22677D86-96C3-4FA4-8172-F9CDC435BBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22677D86-96C3-4FA4-8172-F9CDC435BBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22677D86-96C3-4FA4-8172-F9CDC435BBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22677D86-96C3-4FA4-8172-F9CDC435BBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

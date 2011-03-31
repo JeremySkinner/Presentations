@@ -1,0 +1,22 @@
+- Introduce me
+- What is FluentValidation?
+	- Started about a year and a half ago. A library that allows you to define validation rules in a declarative way, but more flexible than using attributes.
+	- Defined using a fluent interface in separate validator classes. 
+
+DEMO 1 - Basic Usage
+- Add NotNull rule for property
+- Show output when run. 
+- Add custom error message (+with template)
+- Conditional validation rule (RuleFor(x => x.Discount).GreaterThan(0).When(x => x.IsPreferredCustomer))
+- Child Validator (OrderValidator) - add some orders first
+
+
+DEMO 2 - Custom Validation 
+- Use Must
+- Use a custom PropertyValidator:
+
+Demo 3: MVC 2 integration
+- Show app
+- Show contents of global.asax
+- ModelValidatorProvider integates with DefaultModelBinder
+- ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(new AttributedValidatorFactory()));

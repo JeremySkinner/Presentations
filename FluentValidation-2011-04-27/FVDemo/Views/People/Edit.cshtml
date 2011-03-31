@@ -1,0 +1,14 @@
+﻿@model FVDemo.Models.Person
+@{
+    ViewBag.Title = "Edit";
+}
+
+@Html.ValidationSummary()
+	
+@using (Html.BeginForm()) { 
+	@Html.EditorForModel()
+		
+	<p>
+		<input type="submit" value="Save" />
+	</p>
+}

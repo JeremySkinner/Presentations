@@ -1,0 +1,19 @@
+﻿@model IEnumerable<FVDemo.Models.Person>
+@{
+    ViewBag.Title = "People";
+}
+
+<h2>People</h2>
+<p>
+	@Html.ActionLink("Add New", "Create")
+</p>
+	
+<ul>
+	@foreach (var person in Model) {
+	<li>
+		@Html.ActionLink(person.Forename + " " + person.Surname, "Edit", new{ id = person.Id })
+	</li>
+	}
+</ul>
+
+
