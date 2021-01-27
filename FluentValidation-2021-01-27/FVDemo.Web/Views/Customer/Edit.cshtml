@@ -1,0 +1,18 @@
+@model FVDemo.Customer
+@{
+    ViewBag.Title = "Edit";
+}
+
+<form method="post">
+    <div asp-validation-summary="All" class="alert-danger"></div>
+    
+    @Html.EditorForModel()
+    
+    <p style="margin-top: 15px">
+        <input type="submit" value="Save"/>
+    </p>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

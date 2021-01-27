@@ -1,0 +1,66 @@
+- Introduce me
+- What is FluentValidation?
+	- Started in 2008. A library that allows you to define validation rules in a declarative way, but more flexible than using attributes.
+	- Defined using a fluent interface in separate validator classes. 
+
+DEMO 1 - Basic Usage
+- Create class that inherits from AbstractValidator<Person>
+- Add NotNull rule for property
+- Show output when run. 
+- Add custom error message (+with template)
+- Cross Property validation RuleFor(x => x.Surname).NotEqual(x => x.Forename);
+- Conditional (Discount > 0 when IsPreferred)
+- Child Validator (OrderValidator)
+
+
+DEMO 2 - Custom Validation 
+- Age validator using Must: RuleFor(x => x.DateOfBirth).Must(BeOver18).WithMessage("Must be over 18");
+
+bool BeOver18(DateTime dateOfBirth) 
+{
+	var now = DateTime.Today; 
+	int years = now.Year - dateOfBirth.Year;
+
+	if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) {
+		--years;
+	}
+
+	return years >= 18;
+}
+		
+		
+- Use a custom extension method:
+
+public static class Extensions
+{
+    public static IRuleBuilderOptions<T, DateTime> MinimumAge<T>(this IRuleBuilder<T, DateTime> rule, int minimumAge)
+    {
+        return rule.Must(dob => MinimumAge(dob, minimumAge))
+            .WithMessage($"Must be at least {minimumAge} years old.");
+    }
+
+    private static bool MinimumAge(DateTime dateOfBirth, int minimumAge)
+    {
+        var now = DateTime.Today;
+        int years = now.Year - dateOfBirth.Year;
+
+        if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) {
+            --years;
+        }
+
+        return years >= minimumAge;
+    }
+}
+
+Demo 3: Test Extensions
+- Need to use the FluentValidation.TestHelper namespace
+- ShouldHaveValidationErrorFor
+- ShouldNotHaveValidationErrorFor
+- Demonstrate a failure (remove rule)
+- Can pass in a custom instance.
+
+Demo 4: MVC 2 integration
+- Disable DataAnnotations
+- ModelValidatorProvider integates with DefaultModelBinder
+- ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(new AttributedValidatorFactory()));
+- Add some more rules, demonstrate failure

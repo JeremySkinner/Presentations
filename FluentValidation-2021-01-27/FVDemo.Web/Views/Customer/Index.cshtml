@@ -1,0 +1,20 @@
+@model IEnumerable<FVDemo.Customer>
+@{
+    ViewBag.Title = "People";
+}
+
+<h2>Customers</h2>
+<p>
+    <a asp-controller="Customer" asp-action="Create">Add New</a>
+</p>
+	
+<ul>
+    @foreach (var person in Model) 
+    {
+        <li>
+            <a asp-controller="Customer" asp-action="Edit" asp-route-id="@person.Id">
+                @person.Forename @person.Surname
+            </a>
+        </li>
+    }
+</ul>

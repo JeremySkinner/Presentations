@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>FluentValidation.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FVDemo\FVDemo.csproj" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.4.0"></PackageReference>
+  </ItemGroup>
+
+</Project>
