@@ -12,7 +12,7 @@ namespace FVDemo
             var result = validator.Validate(customer);
 
             foreach(var error in result.Errors) {
-                Console.WriteLine("Property: {0} Error Message: {1}", error.PropertyName, error.ErrorMessage);
+                Console.WriteLine($"Property: {error.PropertyName} Error Message: {error.ErrorMessage}");
             }
 
             Console.WriteLine("Press any key to exit");
